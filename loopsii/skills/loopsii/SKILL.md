@@ -1,0 +1,51 @@
+---
+name: loopsii
+description: Use the Loopsii MCP tools to read and update the user's freelance workspace — projects, clients, tasks, time entries, meetings, recordings and documents. Use it whenever the user asks about their work, wants to log time, create or update tasks, or asks what was said or decided in a meeting.
+---
+
+# Working with Loopsii
+
+Loopsii is the user's own workspace. Every tool acts on their account, and every tool that returns a
+`url` returns the record's page inside the app.
+
+## Ground rules
+
+- Finish every reply that created or changed something with the record's `url` as a link. The user is
+  usually reading you with no Loopsii tab open.
+- The `url` is never a public share link. Do not describe it as something the user can send to a client.
+- Nothing here deletes. If the user asks to delete a record, say that deletion happens in the app.
+- Use `search` first whenever the user names something you do not have an id for ("the Acme brief",
+  "that invoice"), then `fetch` or the matching `get_*` tool for the full record.
+
+## Time
+
+- `add_time_entry` logs finished work: duration (`1h30m`, `45m`), the project, and a description of what
+  was actually done. Never invent the description — take it from the user's words.
+- `timer_start` starts a running timer (it stops any running one first); `timer_stop` ends it and
+  reports the entry; `timer_status` says what is running.
+- Ask for the project when it is ambiguous; do not guess between similarly named projects.
+
+## Tasks and projects
+
+- `create_task` needs a title and a project; add priority, due date or milestone only if the user gave
+  them. Completing a task is `update_task` with status `done`.
+- `update_project` overwrites the fields you pass (stage, dates, price). Pass only what changes.
+- Project stages are negotiation → planning → working → closure.
+
+## Meetings
+
+- `list_meetings` and `get_meeting` give notes, chapters and the transcript. Answer from the notes when
+  they cover the question.
+- `ask_meeting` runs Loopsii's AI over the full transcript of one meeting. Use it for precise questions
+  ("what exactly did Vlad say about the polygon budget?"). It needs an extra permission the first time;
+  if the client shows a connect prompt, let the user approve it and retry.
+
+## Documents
+
+- `create_document` takes a title, a project and markdown content; `update_document` replaces the
+  content or title. `get_document` returns markdown.
+
+## Style
+
+- Short answers with the facts the tools returned. Quote meeting notes rather than paraphrasing
+  decisions loosely.

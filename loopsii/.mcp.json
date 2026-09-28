@@ -1,0 +1,5 @@
+{
+    "mcpServers": {
+        "loopsii": { "type": "http", "url": "https://app.loopsii.com/api/mcp" }
+    }
+}
