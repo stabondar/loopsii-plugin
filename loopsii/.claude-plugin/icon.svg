@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Loopsii">
-  <rect width="512" height="512" rx="22" fill="#E0F661"/>
+  <rect width="100" height="100" fill="#E0F661"/>
   <g transform="translate(20,27.235) scale(0.101003)">
     <g transform="translate(-206.211464,737.792618) scale(0.1,-0.1)" fill="#1B1715">
       <path d="M4347 7370 c-376 -47 -766 -228 -1114 -517 -211 -175 -442 -432 -603
