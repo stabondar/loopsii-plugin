@@ -2,9 +2,22 @@
     "name": "loopsii",
     "version": "1.0.0",
     "description": "Projects, clients, tasks, time tracking and meeting notes from Loopsii — search your workspace, log hours, create tasks and ask what was decided on a call.",
-    "author": { "name": "Loopsii", "email": "hey@loopsii.com", "url": "https://loopsii.com" },
+    "author": {
+        "name": "Loopsii",
+        "email": "hey@loopsii.com",
+        "url": "https://loopsii.com"
+    },
     "homepage": "https://loopsii.com/connect/claude",
+    "privacyPolicyUrl": "https://loopsii.com/privacy",
+    "icon": ".claude-plugin/icon.svg",
     "repository": "https://github.com/stabondar/loopsii-plugin",
     "license": "MIT",
-    "keywords": ["crm", "time-tracking", "meetings", "tasks", "freelance", "projects"]
+    "keywords": [
+        "crm",
+        "time-tracking",
+        "meetings",
+        "tasks",
+        "freelance",
+        "projects"
+    ]
 }
