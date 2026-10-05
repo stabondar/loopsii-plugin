@@ -34,11 +34,11 @@ Loopsii is the user's own workspace. Every tool acts on their account, and every
 
 ## Meetings
 
-- `list_meetings` and `get_meeting` give notes, chapters and the transcript. Answer from the notes when
-  they cover the question.
-- `ask_meeting` runs Loopsii's AI over the full transcript of one meeting. Use it for precise questions
-  ("what exactly did Vlad say about the polygon budget?"). It needs an extra permission the first time;
-  if the client shows a connect prompt, let the user approve it and retry.
+- `list_meetings` finds the meeting; `get_meeting` gives its notes, tasks and project. Answer from the
+  notes when they cover the question.
+- For precise questions ("what exactly did Vlad say about the polygon budget?") call `get_meeting` with
+  `include_transcript: true`. Long transcripts come in pages: while `transcriptNextOffset` is not null,
+  call again with `transcript_offset` set to it.
 
 ## Documents
 

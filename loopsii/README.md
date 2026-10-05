@@ -14,12 +14,11 @@ claude plugin install loopsii
 ```
 
 On first use Claude opens the Loopsii sign-in screen; check the account and press **Allow**.
-Asking questions about a meeting needs one more permission, requested the first time it is used.
 
 ## What it can do
 
 - Search your whole workspace and open any project, client, task, document, meeting or recording.
-- Read meeting notes and transcripts, and ask questions about a single meeting.
+- Read meeting notes and full transcripts, and answer questions about what was said in a meeting.
 - Log hours, start and stop your timer.
 - Create and update projects, clients, tasks and documents. It can never delete anything.
 
